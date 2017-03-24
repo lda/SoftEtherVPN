@@ -8,7 +8,7 @@ if [ "$*" == "gencert" ]; then
 
 fi
 
-if [ ! -f /opt/vpn_server.config ]; then
+if [ ! -f /opt/vpn_server.config ] || [ -e /opt/vpn_server.config ] || [ ! -s /opt/vpn_server.config ]; then
 
 : ${PSK:='notasecret'}
 
